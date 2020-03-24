@@ -49,7 +49,7 @@ Crie uma função com as seguintes características:
 */
 
   function multiplica_valores(x, y, z){
-    if (x == null || y == null || z == null){
+    if (x === undefined || y === undefined || z === undefined){
     return 'Preencha todos os valores corretamente!';
     } else {
       return (x * y * z) + 2;
@@ -80,14 +80,16 @@ Crie uma função com as seguintes características:
 */
 
 function func_complexa(x, y, z){
-  if (x == null){
+  if (x === undefined && y === undefined && z === undefined ){
     return false;
-  } else if (y == null){
+  } else if (x !== undefined && y === undefined z === undefined){
     return x;
-  } else if (z == null){
+  } else if (x !== undefined && y !== undefined, && z === undefined){
    return x + y; 
-  } else {
+  } else if (x === undefined && y === undefined, && z === undefined){
     return (x + y) / z;
+  } else {
+    return null;
   }
 }
 
